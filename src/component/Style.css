@@ -34,7 +34,7 @@ body {
 }
 
 .warm {
-    background-image: url(D:\coding\coding\react\react-template\src\component\war-bg.jpg);
+    background-image: url(D:\coding\coding\react\react-template\src\component\cold-bg.jpg);
     background-size: cover;
     background-repeat: no-repeat;
     height: 900px;
