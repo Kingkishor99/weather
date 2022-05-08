@@ -34,7 +34,8 @@ body {
 }
 
 .warm {
-    background-image: url(D:\coding\coding\react\react-template\src\component\war-bg.jpg);
+    /* background-image: url(D:\coding\coding\react\react-template\src\component\war-bg.jpg); */
+    background: linear-gradient(to top, rgb(92, 78, 2), rgb(185, 187, 48));
     background-size: cover;
     background-repeat: no-repeat;
     height: 900px;
@@ -42,14 +43,16 @@ body {
 }
 
 .rainy {
-    background-image: url(D:\coding\coding\react\react-template\src\component\rain.jpg);
+    /* background-image: url(D:\coding\coding\react\react-template\src\component\rain.jpg); */
+    background: linear-gradient(to top, rgb(25, 23, 27), rgb(112, 112, 235));
     background-repeat: no-repeat;
     height: 900px;
 
 }
 
 .winter {
-    background-image: url(D:\coding\coding\react\react-template\src\component\cold-bg.jpg);
+    /* background-image: url(D:\coding\coding\react\react-template\src\component\cold-bg.jpg); */
+    background: linear-gradient(to top, black, rgb(10, 172, 184));
     background-size: cover;
     background-repeat: no-repeat;
     height: 900px;
