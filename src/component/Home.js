@@ -30,13 +30,7 @@ function Home() {
 
 
 
-    // console.log(Math.round(w.main.temp))
-    // if (Math.round(w.main.temp) < 11) { setThermo("thermometer empty icon") }
-    // else
-    //     if (21 > Math.round(w.main.temp) > 10) { setThermo("thermometer quarter icon") }
-    // else
-    //     if (31 > Math.round(w.main.temp) > 20) { setThermo("thermometer half icon") } else
-    //         if (Math.round(w.main.temp) > 30) { setThermo("thermometer full icon") }
+
 
 
 
