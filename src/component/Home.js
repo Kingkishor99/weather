@@ -1,8 +1,8 @@
 
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 function Home() {
 
-    const [text, setText] = useState("")
+    const [text, setText] = useState("sangli")
     const [w, setW] = useState({})
 
     const api = {
@@ -19,13 +19,27 @@ function Home() {
                 .then(res => res.json())
                 .then(result => {
                     setW(result)
-                    console.log(result.cod)
                     if (result.cod == 404) { alert("please enter correct city name") }
+
+
                 })
         }
 
-
     }
+
+
+
+
+    // console.log(Math.round(w.main.temp))
+    // if (Math.round(w.main.temp) < 11) { setThermo("thermometer empty icon") }
+    // else
+    //     if (21 > Math.round(w.main.temp) > 10) { setThermo("thermometer quarter icon") }
+    // else
+    //     if (31 > Math.round(w.main.temp) > 20) { setThermo("thermometer half icon") } else
+    //         if (Math.round(w.main.temp) > 30) { setThermo("thermometer full icon") }
+
+
+
 
     const a = (c) => {
         let months = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
@@ -41,7 +55,7 @@ function Home() {
     }
 
     return (
-        <div className={(typeof w.main != "undefined") ? ((w.main.temp > 16) ? 'warm' : 'winter') : 'rainy'}>
+        <div className={(typeof w.main != "undefined") ? ((w.main.temp > 21) ? 'warm' : 'winter') : 'rainy'}>
             <div className='main'>
                 <div className='search'>
                     <input type="text" className='searchbar' placeholder='Search...'
@@ -52,7 +66,15 @@ function Home() {
                         <div className='place'>{w.name}, {w.sys.country}</div>
                         <div className='date'>{a(new Date())} </div>
                         <div className='temp'>
-                            <div className='temp1'>{Math.round(w.main.temp)}°C</div>
+                            <div className='temp1'>
+                                <i className={(typeof w.main != "undefined") ?
+                                    ((w.main.temp < 21) ? 'thermometer empty icon' : 'thermometer full icon')
+                                    : 'thermometer half icon'}></i>
+                                {Math.round(w.main.temp)}°C
+                                <br />
+                                <i className="tint icon"></i>
+                                {Math.round(w.main.humidity)}%
+                            </div>
                         </div>
                         <div className='weather'>{w.weather[0].main}</div>
                     </div>
@@ -60,7 +82,7 @@ function Home() {
 
 
             </div>
-        </div>
+        </div >
     )
 
 }
