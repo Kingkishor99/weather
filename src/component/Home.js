@@ -19,7 +19,8 @@ function Home() {
                 .then(res => res.json())
                 .then(result => {
                     setW(result)
-                    console.log(result)
+                    console.log(result.cod)
+                    if (result.cod == 404) { alert("please enter correct city name") }
                 })
         }
 
